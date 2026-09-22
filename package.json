@@ -1,0 +1,11 @@
+{
+  "name": "cinescope",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Catalogo web colaborativo de peliculas y series.",
+  "scripts": {
+    "test": "node --test tests/filters.test.js",
+    "validate": "python scripts/validate_catalog.py"
+  }
+}

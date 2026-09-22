@@ -1,17 +1,21 @@
-Aplicación web colaborativa para consultar y organizar un catálogo
-de películas y series.
+# CineScope
 
-## Objetivo académico
+Catalogo web colaborativo para consultar y organizar peliculas y series.
 
-Aplicar un flujo de trabajo basado en GitFlow manual mediante:
+## Estructura
 
-- Ramas main, develop, feature y hotfix.
-- Commits descriptivos.
-- Pull requests.
-- Revisiones de código.
-- Resolución de conflictos.
-- Versionado de entregas.
+- `catalog.html`: vista principal del catalogo.
+- `favorites.html`: peliculas y series favoritas.
+- `assets/`: JavaScript, SCSS e imagenes.
+- `data/catalog.json`: datos del catalogo.
+- `scripts/validate_catalog.py`: validacion del catalogo.
+- `tests/`: pruebas automatizadas y manuales.
 
-## Estado
+## Desarrollo
 
-Proyecto en planificación y configuración inicial.
+Abre `index.html` en un navegador o sirve la carpeta con un servidor local.
+
+```bash
+npm test
+npm run validate
+```
