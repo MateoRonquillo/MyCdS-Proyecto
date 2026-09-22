@@ -13,3 +13,17 @@ pnpm-debug.log*
 .env
 .env.*
 !.env.example
+# Sass
+.sass-cache/
+*.css.map
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
