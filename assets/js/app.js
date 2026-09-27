@@ -1,3 +1,5 @@
-import { loadCatalog } from './catalog.js';
+import { renderCatalog } from './catalog.js';
 
-loadCatalog();
+document.addEventListener('DOMContentLoaded', () => {
+    renderCatalog();
+});

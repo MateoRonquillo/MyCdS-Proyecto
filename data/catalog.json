@@ -1,3 +1,22 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": 1,
+      "titulo": "Interestelar",
+      "tipo": "pelicula",
+      "anio": 2014,
+      "generos": ["Ciencia ficción", "Drama"],
+      "calificacion": 8.7,
+      "imagen": "assets/images/interestelar.webp"
+    },
+    {
+      "id": 2,
+      "titulo": "Stranger Things",
+      "tipo": "serie",
+      "anio": 2016,
+      "generos": ["Ciencia ficción", "Drama"],
+      "calificacion": 8.6,
+      "imagen": "assets/images/stranger-things.webp"
+    }
+  ]
 }
