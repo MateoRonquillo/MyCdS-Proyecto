@@ -1,11 +1,15 @@
-import { getStoredValue, setStoredValue } from './storage.js';
+let favoriteIds = [];
 
-const FAVORITES_KEY = 'cinescope-favorites';
-
-export function getFavorites() {
-  return getStoredValue(FAVORITES_KEY, []);
+export function addFavorite(id) {
+    favoriteIds.push(id);
+    console.log(`Agregado a favoritos: ${id}`);
 }
 
-export function saveFavorites(favorites) {
-  setStoredValue(FAVORITES_KEY, favorites);
+// Función para eliminar un favorito
+export function removeFavorite(id) {
+    const index = favoriteIds.indexOf(id);
+    if (index !== -1) {
+        favoriteIds.splice(index, 1);
+        console.log(`Eliminado de favoritos: ${id}`);
+    }
 }
