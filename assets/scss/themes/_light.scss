@@ -1,3 +1,11 @@
+@use '../abstracts/variables';
+
 [data-theme='light'] {
   color-scheme: light;
+
+  --color-background: #{variables.$color-light-background};
+  --color-surface: #{variables.$color-light-surface};
+  --color-text: #{variables.$color-light-text};
+  --color-border: #{variables.$color-light-border};
+  --color-primary: #{variables.$color-primary};
 }

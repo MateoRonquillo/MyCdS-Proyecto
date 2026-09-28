@@ -7,27 +7,39 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
-  <main>
-    <h1>Catálogo</h1>
-
-    <section class="search-section">
-      <input
-        type="text"
-        id="search-input"
-        placeholder="Buscar películas o series..."
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="site-header__brand" href="index.html">CineScope</a>
+      <button
+        type="button"
+        class="site-header__nav-toggle"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Abrir menu de navegacion"
       >
-
-      <p id="results-counter">0 resultados</p>
-    </section>
-
-    <section id="catalog-container">
-      <!-- Aquí el Integrante 3 renderizará las tarjetas -->
-    </section>
-
-    <p id="empty-message" hidden>No se encontraron resultados.</p>
-  </main>
-
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+    </div>
+    <nav id="main-nav" class="site-header__nav" data-nav-menu>
+      <a href="index.html">Inicio</a>
+      <a href="catalog.html">Catalogo</a>
+      <a href="favorites.html">Favoritos</a>
+      <a href="team.html">Equipo</a>
+      <button
+        type="button"
+        class="theme-toggle"
+        data-theme-toggle
+        aria-pressed="false"
+        aria-label="Cambiar a tema oscuro"
+      >
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☀️</span>
+        <span class="theme-toggle__thumb"></span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+  <main><h1>Catalogo</h1></main>
   <script type="module" src="assets/js/app.js"></script>
 
 </body>
