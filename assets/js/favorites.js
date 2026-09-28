@@ -1,10 +1,12 @@
 // assets/js/favorites.js
+import { saveFavorites, loadFavorites, clearFavoritesStorage } from './storage.js';
 
-let favoriteIds = [];
+let favoriteIds = loadFavorites();
 
 export function addFavorite(id) {
     if (!favoriteIds.includes(id)) {
         favoriteIds.push(id);
+        saveFavorites(favoriteIds);
         console.log(`Agregado a favoritos: ${id}`);
         return true;
     }
@@ -15,6 +17,7 @@ export function removeFavorite(id) {
     const index = favoriteIds.indexOf(id);
     if (index !== -1) {
         favoriteIds.splice(index, 1);
+        saveFavorites(favoriteIds);
         console.log(`Eliminado de favoritos: ${id}`);
         return true;
     }
@@ -25,20 +28,17 @@ export function isFavorite(id) {
     return favoriteIds.includes(id);
 }
 
-// Función profesional usando Bootstrap Icons
 export function updateFavoriteIcon(id, isFav) {
-    // Busca el botón de la película correspondiente
     const btn = document.querySelector(`.btn-favorito[data-id="${id}"]`);
     if (btn) {
-        // Busca el icono dentro del botón
         const icon = btn.querySelector('i');
         if (icon) {
             if (isFav) {
                 icon.classList.remove('bi-heart');
-                icon.classList.add('bi-heart-fill', 'text-danger'); // Corazón relleno
+                icon.classList.add('bi-heart-fill', 'text-danger');
             } else {
                 icon.classList.remove('bi-heart-fill', 'text-danger');
-                icon.classList.add('bi-heart'); // Corazón vacío
+                icon.classList.add('bi-heart');
             }
         }
     }
@@ -56,4 +56,18 @@ export function toggleFavorite(id) {
         updateFavoriteIcon(id, true);
         return true;
     }
+}
+
+// NUEVA FUNCIÓN: Vaciar toda la lista y actualizar la interfaz
+export function clearAllFavorites() {
+    favoriteIds = []; // Vaciamos el arreglo temporal
+    clearFavoritesStorage(); // Vaciamos el localStorage
+    
+    // Desmarcamos todos los corazones rojos que estén en pantalla
+    document.querySelectorAll('.btn-favorito i.bi-heart-fill').forEach(icon => {
+        icon.classList.remove('bi-heart-fill', 'text-danger');
+        icon.classList.add('bi-heart');
+    });
+    
+    console.log("Todos los favoritos han sido eliminados de la memoria.");
 }
