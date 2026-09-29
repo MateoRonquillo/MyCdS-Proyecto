@@ -1,6 +1,6 @@
-#  CineScope
+# CineScope
 
-Aplicación web colaborativa para consultar, buscar y organizar películas y series, desarrollada aplicando Git, GitHub, ramas, pull requests, revisión de código y resolución de conflictos.
+CineScope es una aplicación web estática para consultar, filtrar y organizar películas y series. El proyecto integra una interfaz responsive, módulos JavaScript ES, persistencia local y un flujo de trabajo colaborativo basado en Git y GitHub.
 
 ---
 
@@ -25,9 +25,9 @@ Aplicación web colaborativa para consultar, buscar y organizar películas y ser
 
 ##  Descripción
 
-**CineScope** es una aplicación web que permite consultar y organizar un catálogo de películas y series. El proyecto incorpora diferentes funcionalidades como búsqueda, filtros, favoritos, persistencia de información, visualización de detalles y selección de tema.
+**CineScope** permite explorar un catálogo de seis títulos, buscar por nombre, filtrar por tipo, género y año, ordenar resultados, consultar detalles y administrar favoritos. La preferencia de tema claro u oscuro y los favoritos se conservan mediante `localStorage`.
 
-El proyecto fue desarrollado con fines académicos. Para organizar el trabajo se utilizaron Git y GitHub, permitiendo que cada funcionalidad fuera desarrollada en una rama independiente y posteriormente integrada mediante pull requests.
+El proyecto tiene fines académicos y se desarrolló mediante ramas independientes, pull requests, revisión de cambios y resolución documentada de conflictos.
 
 ---
 
@@ -53,16 +53,13 @@ Desarrollar una aplicación web colaborativa para consultar y organizar un catá
 
 ##  Funcionalidades
 
--  Página principal con información general del catálogo.
--  Catálogo de películas y series.
--  Búsqueda de contenido.
--  Filtros y ordenamiento.
--  Visualización detallada del contenido.
--  Gestión de favoritos.
--  Persistencia mediante `localStorage`.
--  Tema claro y oscuro.
--  Diseño responsive.
--  Página de información del equipo.
+- Página principal con estadísticas y títulos destacados.
+- Catálogo de películas y series cargado desde `data/catalog.json`.
+- Búsqueda por título, filtros combinados y ordenamiento.
+- Modal con información detallada de cada título.
+- Gestión de favoritos con persistencia mediante `localStorage`.
+- Temas claro y oscuro persistentes entre páginas.
+- Navegación responsive y página informativa del Grupo 6.
 
 ---
 
@@ -118,11 +115,13 @@ Instalar las dependencias:
 npm install
 ```
 
-Para ejecutar el proyecto mediante un servidor local (Live Server) se puede utilizar:
+Debido al uso de módulos ES y `fetch()`, el proyecto debe ejecutarse mediante un servidor local. Por ejemplo:
 
 ```bash
 python -m http.server 5500
 ```
+
+Después, abra `http://localhost:5500/index.html` en un navegador moderno.
 
 ### Compilar Sass
 
@@ -192,6 +191,8 @@ feature/* ──────► develop ──────► main
                Pull Request
                  + revisión
 ```
+                    El catálogo actual contiene seis registros en `data/catalog.json`. Las carpetas de imágenes se mantienen disponibles para futuras portadas; la interfaz utiliza actualmente portadas tipográficas para evitar dependencias de recursos externos.
+
 
 ### Flujo de trabajo de cada integrante
 
