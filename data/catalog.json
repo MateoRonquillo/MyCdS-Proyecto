@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "items": [
     {
       "id": 1,
@@ -20,3 +21,17 @@
     }
   ]
 }
+=======
+  "items":[
+    {
+      "titulo":"Interestelar"
+    },
+    {
+      "titulo":"Avatar"
+    },
+    {
+      "titulo":"Stranger Things"
+    }
+  ]
+}
+>>>>>>> 1ee9c58162375cedb01f8706587146d168ec8a53
