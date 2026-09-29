@@ -1,7 +1,19 @@
-// assets/js/favorites.js
+/**
+ * ==========================================
+ * MÓDULO DE FAVORITOS
+ * ==========================================
+ * Lógica para agregar, eliminar y actualizar
+ * visualmente los favoritos del usuario.
+ */
+
 import { saveFavorites, loadFavorites, clearFavoritesStorage } from './storage.js';
 
+// 1. Inicialización de estado
 let favoriteIds = loadFavorites();
+
+// ==========================================
+// 2. Lógica de control de datos
+// ==========================================
 
 export function addFavorite(id) {
     if (!favoriteIds.includes(id)) {
@@ -28,6 +40,22 @@ export function isFavorite(id) {
     return favoriteIds.includes(id);
 }
 
+export function clearAllFavorites() {
+    favoriteIds = [];
+    clearFavoritesStorage();
+
+    document.querySelectorAll('.btn-favorito i.bi-heart-fill').forEach(icon => {
+        icon.classList.remove('bi-heart-fill', 'text-danger');
+        icon.classList.add('bi-heart');
+    });
+
+    console.log("Todos los favoritos han sido eliminados de la memoria.");
+}
+
+// ==========================================
+// 3. Lógica de interfaz gráfica (UI)
+// ==========================================
+
 export function updateFavoriteIcon(id, isFav) {
     const btn = document.querySelector(`.btn-favorito[data-id="${id}"]`);
     if (btn) {
@@ -46,7 +74,7 @@ export function updateFavoriteIcon(id, isFav) {
 
 export function toggleFavorite(id) {
     const isFav = isFavorite(id);
-    
+
     if (isFav) {
         removeFavorite(id);
         updateFavoriteIcon(id, false);
@@ -56,18 +84,4 @@ export function toggleFavorite(id) {
         updateFavoriteIcon(id, true);
         return true;
     }
-}
-
-// NUEVA FUNCIÓN: Vaciar toda la lista y actualizar la interfaz
-export function clearAllFavorites() {
-    favoriteIds = []; // Vaciamos el arreglo temporal
-    clearFavoritesStorage(); // Vaciamos el localStorage
-    
-    // Desmarcamos todos los corazones rojos que estén en pantalla
-    document.querySelectorAll('.btn-favorito i.bi-heart-fill').forEach(icon => {
-        icon.classList.remove('bi-heart-fill', 'text-danger');
-        icon.classList.add('bi-heart');
-    });
-    
-    console.log("Todos los favoritos han sido eliminados de la memoria.");
 }
