@@ -1,6 +1,6 @@
-# Arquitectura
+# Arquitectura de CineScope
 
-CineScope es una aplicación web estática organizada por responsabilidades. Utiliza HTML para la estructura de las vistas, JavaScript modular para la lógica de la aplicación, SCSS/CSS para la definición de estilos y un archivo JSON como fuente de datos del catálogo.
+CineScope es una aplicación web estática organizada por responsabilidades. Las vistas se implementan con HTML, la lógica se divide en módulos JavaScript ES, los estilos se mantienen en SCSS/CSS y `data/catalog.json` funciona como fuente de datos del catálogo.
 
 ## Organización del proyecto
 
@@ -40,7 +40,7 @@ cinescope/
 └── package.json, .gitignore, LICENSE
 ```
 
-Cada funcionalidad del proyecto, como catálogo, búsqueda, favoritos o tema, se desarrolla en su propia rama `feature/*` y posteriormente se integra a `develop` mediante un pull request, como se detalla en `docs/pull-requests.md`.
+Las funcionalidades se desarrollaron en ramas `feature/*` y se integraron en `develop` mediante pull requests. El historial de integraciones se encuentra en `docs/pull-requests.md`.
 
 ## Tecnologías
 
@@ -75,23 +75,23 @@ Los archivos ubicados dentro de `assets/js/` se organizan de acuerdo con las dif
 | `filters.js` | Gestiona la búsqueda por título, los filtros por tipo, género y año, además del ordenamiento. |
 | `favorites.js` | Permite agregar, eliminar y consultar los elementos almacenados como favoritos. |
 | `storage.js` | Gestiona la comunicación con `localStorage` para almacenar información persistente. |
-| `modal.js` | Gestiona la ventana utilizada para mostrar los detalles de una película o serie. |
+| `modal.js` | Expone utilidades básicas para abrir y cerrar elementos `dialog`. |
 | `theme.js` | Gestiona los temas claro y oscuro, su aplicación y el almacenamiento de la preferencia seleccionada. |
 | `nav.js` | Controla el comportamiento del menú de navegación en dispositivos móviles. |
 | `dashboard.js` | Realiza el cálculo y renderizado del resumen y las estadísticas mostradas en `index.html`. |
-| `validation.js` | Realiza validaciones sobre los datos antes de utilizarlos o mostrarlos en la interfaz. |
+| `validation.js` | Contiene una validación auxiliar para comprobar títulos en objetos de catálogo. |
 
 `app.js` funciona como punto principal de inicialización de la aplicación, debido a que desde este archivo se importan y ejecutan los diferentes módulos. Por esta razón, puede ser uno de los archivos con mayor posibilidad de presentar conflictos de fusión cuando diferentes ramas modifican simultáneamente la inicialización de nuevas funcionalidades.
 
 ## Gestión de datos
 
-La información del catálogo se almacena en `data/catalog.json` mediante un arreglo de objetos. Cada elemento contiene información relacionada con una película o serie, utilizando campos como `id`, `titulo`, `tipo`, `anio`, `generos`, `director`, `reparto`, `duracion`, `temporadas`, `calificacion`, `sinopsis` e `imagen`.
+La información del catálogo se almacena en `data/catalog.json` dentro de la propiedad `items`, que contiene seis objetos. Cada registro utiliza campos como `id`, `titulo`, `tipo`, `anio`, `generos`, `director`, `reparto`, `duracion`, `temporadas`, `calificacion`, `sinopsis` e `imagen`.
 
 El campo `tipo` permite identificar si el contenido corresponde a una `pelicula` o una `serie`, mientras que determinados campos, como `duracion` o `temporadas`, pueden utilizarse según el tipo de contenido almacenado.
 
 El módulo `catalog.js` utiliza `fetch()` para cargar la información del archivo JSON cuando se inicia la página correspondiente. Posteriormente, `filters.js` trabaja con estos datos para realizar operaciones de búsqueda, filtrado y ordenamiento.
 
-Por otra parte, `scripts/validate_catalog.py` permite comprobar la integridad de los datos de forma independiente al navegador, verificando aspectos como identificadores únicos, presencia de campos obligatorios y valores válidos para determinados atributos.
+Por otra parte, `scripts/validate_catalog.py` comprueba que el archivo contenga una lista `items` válida y muestra la cantidad de registros disponibles.
 
 ## Estilos
 
@@ -115,6 +115,6 @@ El módulo `storage.js` centraliza las operaciones relacionadas con el almacenam
 
 - **Tema seleccionado:** la preferencia del tema se almacena para aplicarla nuevamente al cargar las páginas. Si no existe una selección previa, la aplicación puede utilizar la preferencia establecida en el sistema del usuario.
 - **Favoritos:** los títulos seleccionados como favoritos se almacenan para conservar la lista entre diferentes sesiones y evitar registros duplicados.
-- **Filtros y orden:** en caso de utilizar persistencia para estas opciones, sus valores pueden almacenarse para conservar la última configuración seleccionada por el usuario.
+- **Filtros y orden:** se mantienen en el estado de la página y se aplican sobre la colección cargada; no se almacenan actualmente.
 
 El uso de `localStorage` permite implementar persistencia sin necesidad de una base de datos o servidor, manteniendo la arquitectura estática de la aplicación.

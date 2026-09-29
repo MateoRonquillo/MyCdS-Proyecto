@@ -8,4 +8,8 @@
   --color-text: #{variables.$color-light-text};
   --color-border: #{variables.$color-light-border};
   --color-primary: #{variables.$color-primary};
+  --paper: #{variables.$color-light-background};
+  --surface: #{variables.$color-light-surface};
+  --line: #{variables.$color-light-border};
+  --ink: #{variables.$color-light-text};
 }

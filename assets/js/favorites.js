@@ -11,6 +11,10 @@ import { saveFavorites, loadFavorites, clearFavoritesStorage } from './storage.j
 // 1. Inicialización de estado
 let favoriteIds = loadFavorites();
 
+export function getFavorites() {
+    return [...favoriteIds];
+}
+
 // ==========================================
 // 2. Lógica de control de datos
 // ==========================================
