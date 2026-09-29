@@ -33,7 +33,7 @@
         aria-pressed="false"
         aria-label="Cambiar a tema oscuro"
       >
-        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☀️</span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☀️️</span>
         <span class="theme-toggle__thumb"></span>
         <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">🌙</span>
       </button>
@@ -41,6 +41,7 @@
   </header>
   <main>
     <h1>Catálogo</h1>
+    
     <section class="search-section">
       <input
         type="text"
@@ -81,16 +82,24 @@
         </select>
       </div>
 
-
       <p id="results-counter">0 resultados</p>
     </section>
 
-
-    <section id="catalog-container">
-
-    </section>
+    <div id="catalog-grid" class="catalog-grid"></div>
 
     <p id="empty-message" hidden>No se encontraron resultados.</p>
+  
+    <dialog id="details-modal" class="modal">
+      <div class="modal-content">
+        <button id="close-modal" class="btn-close" aria-label="Cerrar modal">&times;</button>
+        <h2 id="modal-title">Título del contenido</h2>
+        <div class="modal-body">
+          <p><strong>Director:</strong> <span id="modal-director"></span></p>
+          <p><strong>Elenco:</strong> <span id="modal-elenco"></span></p>
+          <p><strong>Sinopsis:</strong> <span id="modal-sinopsis"></span></p>
+        </div>
+      </div>
+    </dialog>
   </main>
   <script type="module" src="assets/js/app.js"></script>
 
