@@ -25,7 +25,8 @@ export function saveFavorites(favoritesArray) {
 export function loadFavorites() {
   try {
     const data = localStorage.getItem(STORAGE_KEY);
-    return data ? JSON.parse(data) : [];
+    const favorites = data ? JSON.parse(data) : [];
+    return Array.isArray(favorites) ? favorites : [];
   } catch (error) {
     console.error("Datos locales inválidos, devolviendo lista vacía:", error);
     return [];

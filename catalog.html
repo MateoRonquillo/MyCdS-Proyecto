@@ -6,7 +6,7 @@
   <title>Catálogo | CineScope</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body data-page="catalog">
   <header class="site-header">
     <div class="site-header__bar">
       <a class="site-header__brand" href="index.html">CineScope</a>
@@ -86,12 +86,21 @@
     </section>
 
 
-    <section id="catalog-container">
-
-    </section>
+    <section id="catalog-container" class="catalog-grid" aria-live="polite"></section>
 
     <p id="empty-message" hidden>No se encontraron resultados.</p>
   </main>
+
+  <dialog id="details-modal" aria-labelledby="modal-title">
+    <button id="close-modal" class="modal-close" type="button" aria-label="Cerrar detalles">&times;</button>
+    <p class="eyebrow">DETALLES DEL TÍTULO</p>
+    <h2 id="modal-title"></h2>
+    <dl>
+      <dt>Director</dt><dd id="modal-director"></dd>
+      <dt>Reparto</dt><dd id="modal-elenco"></dd>
+    </dl>
+    <p id="modal-sinopsis"></p>
+  </dialog>
   
   <script type="module" src="assets/js/app.js"></script>
 </body>

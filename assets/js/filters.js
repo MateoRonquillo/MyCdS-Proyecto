@@ -1,33 +1,30 @@
 export function filterCatalog(items, options = {}) {
-  // Extraemos las opciones con valores por defecto
+  if (typeof options === 'string') {
+    options = { query: options };
+  }
+
   const { query = '', type = '', genre = '', year = '', sortBy = 'default' } = options;
 
-  // 1. Aplicar todos los filtros combinados
   let filteredItems = items.filter(item => {
-    // Coincidencia de texto en el título
-    const matchQuery = !query || item.titulo?.toLowerCase().includes(query.trim().toLowerCase());
-    
-    // Coincidencia de tipo (pelicula o serie)
-    const matchType = !type || item.tipo === type;
-    
-    // Coincidencia de género (buscamos en el arreglo de géneros)
-    const matchGenre = !genre || (item.generos && item.generos.includes(genre));
-    
-    // Coincidencia de año
-    const matchYear = !year || item.anio?.toString() === year;
+    const title = item.titulo || item.title || '';
+    const genres = item.generos || item.genres || (item.genero ? [item.genero] : []);
+    const matchQuery = !query || title.toLowerCase().includes(query.trim().toLowerCase());
+    const matchType = !type || (item.tipo || item.type) === type;
+    const matchGenre = !genre || genres.includes(genre);
+    const matchYear = !year || String(item.anio || item.year || '') === String(year);
 
-    // La película debe cumplir TODOS los filtros activos
     return matchQuery && matchType && matchGenre && matchYear;
   });
 
-  // 2. Aplicar el ordenamiento a los resultados filtrados
   if (sortBy !== 'default') {
     filteredItems.sort((a, b) => {
-      if (sortBy === 'az') return a.titulo.localeCompare(b.titulo);
-      if (sortBy === 'za') return b.titulo.localeCompare(a.titulo);
+      const titleA = a.titulo || a.title || '';
+      const titleB = b.titulo || b.title || '';
+      if (sortBy === 'az') return titleA.localeCompare(titleB);
+      if (sortBy === 'za') return titleB.localeCompare(titleA);
       if (sortBy === 'rating-desc') return (b.calificacion || 0) - (a.calificacion || 0);
-      if (sortBy === 'year-desc') return (b.anio || 0) - (a.anio || 0);
-      if (sortBy === 'year-asc') return (a.anio || 0) - (b.anio || 0);
+      if (sortBy === 'year-desc') return (b.anio || b.year || 0) - (a.anio || a.year || 0);
+      if (sortBy === 'year-asc') return (a.anio || a.year || 0) - (b.anio || b.year || 0);
       return 0;
     });
   }

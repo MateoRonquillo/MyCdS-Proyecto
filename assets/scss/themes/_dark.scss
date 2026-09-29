@@ -8,4 +8,8 @@
   --color-text: #{variables.$color-dark-text};
   --color-border: #{variables.$color-dark-border};
   --color-primary: #{variables.$color-primary};
+  --paper: #{variables.$color-dark-background};
+  --surface: #{variables.$color-dark-surface};
+  --line: #{variables.$color-dark-border};
+  --ink: #{variables.$color-dark-text};
 }

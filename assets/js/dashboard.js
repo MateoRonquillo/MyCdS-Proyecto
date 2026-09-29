@@ -26,8 +26,8 @@ function renderFeatured(items) {
 
   container.innerHTML = items.slice(0, 3).map((item) => `
     <article class="featured-card">
-      <div class="featured-card__visual"><i class="bi bi-play-circle" aria-hidden="true"></i></div>
-      <div class="featured-card__body"><span>${item.genre || item.genero || 'Para descubrir'}</span><h3>${item.title || item.titulo || 'Sin titulo'}</h3><p>${item.year || item.ano || ''}</p></div>
+      <div class="featured-card__visual"><span>${item.titulo || item.title || 'Sin titulo'}</span><i class="bi bi-play-circle" aria-hidden="true"></i></div>
+      <div class="featured-card__body"><span>${(item.generos || (item.genero ? [item.genero] : ['Para descubrir']))[0]}</span><h3>${item.title || item.titulo || 'Sin titulo'}</h3><p>${item.year || item.ano || item.anio || ''}</p></div>
     </article>`).join('');
 }
 
