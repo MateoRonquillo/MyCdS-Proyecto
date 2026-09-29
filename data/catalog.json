@@ -1,0 +1,136 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "titulo": "Interestelar",
+      "tituloOriginal": "Interstellar",
+      "tipo": "pelicula",
+      "anio": 2014,
+      "generos": [
+        "Ciencia ficción",
+        "Drama"
+      ],
+      "director": "Christopher Nolan",
+      "reparto": [
+        "Matthew McConaughey",
+        "Anne Hathaway"
+      ],
+      "duracion": 169,
+      "temporadas": null,
+      "calificacion": 8.7,
+      "sinopsis": "Un grupo de exploradores viaja a través de un agujero de gusano.",
+      "imagen": "assets/images/interestelar.webp",
+      "destacada": true
+    },
+    {
+      "id": 2,
+      "titulo": "Stranger Things",
+      "tituloOriginal": "Stranger Things",
+      "tipo": "serie",
+      "anio": 2016,
+      "generos": [
+        "Ciencia ficción",
+        "Drama"
+      ],
+      "director": "The Duffer Brothers",
+      "reparto": [
+        "Winona Ryder",
+        "David Harbour"
+      ],
+      "duracion": null,
+      "temporadas": 4,
+      "calificacion": 8.6,
+      "sinopsis": "Un grupo de jóvenes investiga acontecimientos sobrenaturales.",
+      "imagen": "assets/images/stranger-things.webp",
+      "destacada": true
+    },
+    {
+      "id": 3,
+      "titulo": "El origen",
+      "tituloOriginal": "Inception",
+      "tipo": "pelicula",
+      "anio": 2010,
+      "generos": [
+        "Ciencia ficción",
+        "Acción"
+      ],
+      "director": "Christopher Nolan",
+      "reparto": [
+        "Leonardo DiCaprio",
+        "Joseph Gordon-Levitt"
+      ],
+      "duracion": 148,
+      "temporadas": null,
+      "calificacion": 8.8,
+      "sinopsis": "Un especialista en infiltrarse en los sueños recibe una misión casi imposible.",
+      "imagen": "assets/images/el-origen.webp",
+      "destacada": true
+    },
+    {
+      "id": 4,
+      "titulo": "The Last of Us",
+      "tituloOriginal": "The Last of Us",
+      "tipo": "serie",
+      "anio": 2023,
+      "generos": [
+        "Drama",
+        "Acción"
+      ],
+      "director": "Craig Mazin",
+      "reparto": [
+        "Pedro Pascal",
+        "Bella Ramsey"
+      ],
+      "duracion": null,
+      "temporadas": 1,
+      "calificacion": 8.7,
+      "sinopsis": "Dos supervivientes atraviesan un mundo transformado por una pandemia mientras buscan una nueva esperanza.",
+      "imagen": "assets/images/the-last-of-us.webp",
+      "destacada": true
+    },
+    {
+      "id": 5,
+      "titulo": "Spider-Man: Un nuevo universo",
+      "tituloOriginal": "Spider-Man: Into the Spider-Verse",
+      "tipo": "pelicula",
+      "anio": 2018,
+      "generos": [
+        "Animación",
+        "Acción"
+      ],
+      "director": "Bob Persichetti, Peter Ramsey y Rodney Rothman",
+      "reparto": [
+        "Shameik Moore",
+        "Jake Johnson"
+      ],
+      "duracion": 117,
+      "temporadas": null,
+      "calificacion": 8.4,
+      "sinopsis": "Miles Morales descubre que no es el único Spider-Man y aprende a asumir su propio destino.",
+      "imagen": "assets/images/spider-man-un-nuevo-universo.webp",
+      "destacada": false
+    },
+    {
+      "id": 6,
+      "titulo": "Parásitos",
+      "tituloOriginal": "Gisaengchung",
+      "tipo": "pelicula",
+      "anio": 2019,
+      "generos": [
+        "Drama",
+        "Comedia"
+      ],
+      "director": "Bong Joon-ho",
+      "reparto": [
+        "Song Kang-ho",
+        "Choi Woo-shik"
+      ],
+      "duracion": 132,
+      "temporadas": null,
+      "calificacion": 8.5,
+      "sinopsis": "Una familia con dificultades económicas se aproxima poco a poco a un hogar privilegiado.",
+      "imagen": "assets/images/parasitos.webp",
+      "destacada": false
+    }
+  ]
+}

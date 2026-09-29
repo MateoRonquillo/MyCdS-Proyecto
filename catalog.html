@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo | CineScope</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body data-page="catalog">
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="site-header__brand" href="index.html">CineScope</a>
+      <button
+        type="button"
+        class="site-header__nav-toggle"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Abrir menu de navegacion"
+      >
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+    </div>
+    <nav id="main-nav" class="site-header__nav" data-nav-menu>
+      <a href="index.html">Inicio</a>
+      <a href="catalog.html">Catalogo</a>
+      <a href="favorites.html">Favoritos</a>
+      <a href="team.html">Equipo</a>
+      <button
+        type="button"
+        class="theme-toggle"
+        data-theme-toggle
+        aria-pressed="false"
+        aria-label="Cambiar a tema oscuro"
+      >
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☀️</span>
+        <span class="theme-toggle__thumb"></span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <h1>Catálogo</h1>
+    <section class="search-section">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Buscar películas o series..."
+      >
+
+      <div id="filters-container" class="filters">
+        <select id="filter-type">
+          <option value="">Todos los tipos</option>
+          <option value="pelicula">Películas</option>
+          <option value="serie">Series</option>
+        </select>
+
+        <select id="filter-genre">
+          <option value="">Todos los géneros</option>
+          <option value="Acción">Acción</option>
+          <option value="Comedia">Comedia</option>
+          <option value="Drama">Drama</option>
+          <option value="Ciencia ficción">Ciencia ficción</option>
+          <option value="Terror">Terror</option>
+          <option value="Animación">Animación</option>
+        </select>
+
+        <select id="filter-year">
+          <option value="">Todos los años</option>
+          <option value="2016">2016</option>
+          <option value="2014">2014</option>
+        </select>
+
+        <select id="sort-by">
+          <option value="default">Ordenar por...</option>
+          <option value="az">Título (A-Z)</option>
+          <option value="za">Título (Z-A)</option>
+          <option value="rating-desc">Mejor calificación</option>
+          <option value="year-desc">Más recientes</option>
+          <option value="year-asc">Más antiguas</option>
+        </select>
+      </div>
+
+
+      <p id="results-counter">0 resultados</p>
+    </section>
+
+
+    <section id="catalog-container" class="catalog-grid" aria-live="polite"></section>
+
+    <p id="empty-message" hidden>No se encontraron resultados.</p>
+  </main>
+
+  <dialog id="details-modal" aria-labelledby="modal-title">
+    <button id="close-modal" class="modal-close" type="button" aria-label="Cerrar detalles">&times;</button>
+    <p class="eyebrow">DETALLES DEL TÍTULO</p>
+    <h2 id="modal-title"></h2>
+    <dl>
+      <dt>Director</dt><dd id="modal-director"></dd>
+      <dt>Reparto</dt><dd id="modal-elenco"></dd>
+    </dl>
+    <p id="modal-sinopsis"></p>
+  </dialog>
+  
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

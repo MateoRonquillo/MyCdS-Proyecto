@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipo | CineScope</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="site-header__bar">
+      <a class="site-header__brand" href="index.html">CineScope</a>
+      <button
+        type="button"
+        class="site-header__nav-toggle"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Abrir menu de navegacion"
+      >
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+    </div>
+    <nav id="main-nav" class="site-header__nav" data-nav-menu>
+      <a href="index.html">Inicio</a>
+      <a href="catalog.html">Catalogo</a>
+      <a href="favorites.html">Favoritos</a>
+      <a href="team.html">Equipo</a>
+      <button
+        type="button"
+        class="theme-toggle"
+        data-theme-toggle
+        aria-pressed="false"
+        aria-label="Cambiar a tema oscuro"
+      >
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☀️</span>
+        <span class="theme-toggle__thumb"></span>
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+  <main class="team-page">
+    <p class="eyebrow">QUIÉNES ESTÁN DETRÁS</p>
+    <h1>Grupo 6</h1>
+    <section class="team-card" aria-labelledby="team-title">
+      <div class="team-card__badge" aria-hidden="true">G6</div>
+      <div>
+        <h2 id="team-title">Un equipo que convierte historias en una experiencia para descubrir</h2>
+        <p>El Grupo 6 desarrolla CineScope como un espacio audiovisual claro, accesible y fácil de explorar. Nos encargamos de organizar el catálogo, construir las funciones de búsqueda y favoritos, y cuidar que cada pantalla mantenga una experiencia coherente en cualquier dispositivo.</p>
+        <p>Trabajamos de forma colaborativa, combinando análisis, diseño y desarrollo para que cada título encuentre su lugar y cada persona pueda descubrir algo nuevo para ver.</p>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

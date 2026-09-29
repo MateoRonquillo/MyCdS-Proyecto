@@ -1,0 +1,16 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'themes/light';
+@use 'themes/dark';
+@use 'components/cards';
+@use 'components/buttons';
+@use 'components/modal';
+@use 'layout/header';
+@use 'layout/catalog';
+@use 'layout/footer';
+
+body {
+  background-color: var(--color-background, #{variables.$color-background});
+  color: var(--color-text, #{variables.$color-text});
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
