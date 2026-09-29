@@ -26,8 +26,12 @@ function renderFeatured(items) {
 
   container.innerHTML = items.slice(0, 3).map((item) => `
     <article class="featured-card">
-      <div class="featured-card__visual"><span>${item.titulo || item.title || 'Sin titulo'}</span><i class="bi bi-play-circle" aria-hidden="true"></i></div>
-      <div class="featured-card__body"><span>${(item.generos || (item.genero ? [item.genero] : ['Para descubrir']))[0]}</span><h3>${item.title || item.titulo || 'Sin titulo'}</h3><p>${item.year || item.ano || item.anio || ''}</p></div>
+      <div class="featured-card__visual">
+        <img src="${item.imagen}" alt="Póster de ${item.titulo || item.title || 'Sin titulo'}" loading="lazy">
+        <span>${item.titulo || item.title || 'Sin titulo'}</span>
+        <i class="bi bi-play-circle" aria-hidden="true"></i>
+      </div>
+      <div class="featured-card__body"><span>${(item.generos || (item.genero ? [item.genero] : ['Para descubrir']))[0]}</span><h3>${item.title || item.titulo || 'Sin titulo'}</h3><p>${item.year || item.ano || item.anio || ''}</p><a class="featured-card__image-source" href="${item.imagenFuente}" target="_blank" rel="noopener noreferrer">Fuente de la imagen</a></div>
     </article>`).join('');
 }
 

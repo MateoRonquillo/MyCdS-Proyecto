@@ -191,7 +191,7 @@ feature/* ──────► develop ──────► main
                Pull Request
                  + revisión
 ```
-                    El catálogo actual contiene seis registros en `data/catalog.json`. Las carpetas de imágenes se mantienen disponibles para futuras portadas; la interfaz utiliza actualmente portadas tipográficas para evitar dependencias de recursos externos.
+                    El catálogo actual contiene seis registros en `data/catalog.json`. Las tarjetas muestran pósteres enlazados desde Wikimedia/Wikipedia y cada título incluye un enlace a su página fuente. Estas imágenes requieren conexión a Internet y sus derechos pertenecen a sus respectivos titulares; antes de publicar el sitio fuera de un uso académico, sustituya los pósteres por recursos con licencia compatible.
 
 
 ### Flujo de trabajo de cada integrante
