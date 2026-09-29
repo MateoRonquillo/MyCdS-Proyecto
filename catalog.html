@@ -7,7 +7,22 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <main><h1>Catalogo</h1></main>
+  <main>
+    <h1>Catalogo</h1>
+  
+  <!-- Ventana Modal de Detalles -->
+<dialog id="details-modal" class="modal">
+  <div class="modal-content">
+    <button id="close-modal" class="btn-close" aria-label="Cerrar modal">&times;</button>
+    <h2 id="modal-title">Título del contenido</h2>
+    <div class="modal-body">
+      <p><strong>Director:</strong> <span id="modal-director"></span></p>
+      <p><strong>Elenco:</strong> <span id="modal-elenco"></span></p>
+      <p><strong>Sinopsis:</strong> <span id="modal-sinopsis"></span></p>
+    </div>
+  </div>
+</dialog>
+</main>
   <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
