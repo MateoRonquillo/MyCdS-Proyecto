@@ -1,13 +1,48 @@
 {
-  "items":[
+  "items": [
     {
-      "titulo":"Interestelar"
+      "id": 1,
+      "titulo": "Interestelar",
+      "tituloOriginal": "Interstellar",
+      "tipo": "pelicula",
+      "anio": 2014,
+      "generos": [
+        "Ciencia ficción",
+        "Drama"
+      ],
+      "director": "Christopher Nolan",
+      "reparto": [
+        "Matthew McConaughey",
+        "Anne Hathaway"
+      ],
+      "duracion": 169,
+      "temporadas": null,
+      "calificacion": 8.7,
+      "sinopsis": "Un grupo de exploradores viaja a través de un agujero de gusano.",
+      "imagen": "assets/images/interestelar.webp",
+      "destacada": true
     },
     {
-      "titulo":"Avatar"
-    },
-    {
-      "titulo":"Stranger Things"
+      "id": 2,
+      "titulo": "Stranger Things",
+      "tituloOriginal": "Stranger Things",
+      "tipo": "serie",
+      "anio": 2016,
+      "generos": [
+        "Ciencia ficción",
+        "Drama"
+      ],
+      "director": "The Duffer Brothers",
+      "reparto": [
+        "Winona Ryder",
+        "David Harbour"
+      ],
+      "duracion": null,
+      "temporadas": 4,
+      "calificacion": 8.6,
+      "sinopsis": "Un grupo de jóvenes investiga acontecimientos sobrenaturales.",
+      "imagen": "assets/images/stranger-things.webp",
+      "destacada": true
     }
   ]
 }
