@@ -8,3 +8,9 @@
 @use 'layout/header';
 @use 'layout/catalog';
 @use 'layout/footer';
+
+body {
+  background-color: var(--color-background, #{variables.$color-background});
+  color: var(--color-text, #{variables.$color-text});
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
