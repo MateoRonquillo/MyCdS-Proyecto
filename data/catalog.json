@@ -1,13 +1,36 @@
 {
-  "items":[
+  "items": [
     {
-      "titulo":"Interestelar"
+      "id": 1,
+      "title": "Inception",
+      "image": "assets/img/inception.jpg",
+      "director": "Christopher Nolan",
+      "elenco": "Leonardo DiCaprio, Joseph Gordon-Levitt",
+      "sinopsis": "Un ladrón roba secretos corporativos usando la tecnología de compartir sueños."
     },
     {
-      "titulo":"Avatar"
+      "id": 2,
+      "title": "Interestelar",
+      "image": "assets/img/interstellar.jpg",
+      "director": "Christopher Nolan",
+      "elenco": "Matthew McConaughey, Anne Hathaway",
+      "sinopsis": "Un equipo de exploradores viaja a través de un agujero de gusano."
     },
     {
-      "titulo":"Stranger Things"
+      "id": 3,
+      "title": "Avatar",
+      "image": "assets/img/avatar.jpg",
+      "director": "James Cameron",
+      "elenco": "Sam Worthington, Zoe Saldana",
+      "sinopsis": "Un marine parapléjico es enviado a la luna Pandora en una misión única."
+    },
+    {
+      "id": 4,
+      "title": "Stranger Things",
+      "image": "assets/img/stranger.jpg",
+      "director": "Duffer Brothers",
+      "elenco": "Millie Bobby Brown, Finn Wolfhard",
+      "sinopsis": "Cuando un niño desaparece, un pequeño pueblo descubre un gran misterio."
     }
   ]
 }
