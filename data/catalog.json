@@ -1,37 +1,52 @@
 {
-<<<<<<< HEAD
   "items": [
     {
       "id": 1,
+      "titulo": "Inception",
+      "tipo": "pelicula",
+      "anio": 2010,
+      "generos": ["Ciencia ficción", "Acción"],
+      "calificacion": 8.8,
+      "imagen": "assets/img/inception.jpg",
+      "director": "Christopher Nolan",
+      "elenco": "Leonardo DiCaprio, Joseph Gordon-Levitt",
+      "sinopsis": "Un ladrón roba secretos corporativos usando la tecnología de compartir sueños."
+    },
+    {
+      "id": 2,
       "titulo": "Interestelar",
       "tipo": "pelicula",
       "anio": 2014,
       "generos": ["Ciencia ficción", "Drama"],
       "calificacion": 8.7,
-      "imagen": "assets/images/interestelar.webp"
+      "imagen": "assets/images/interestelar.webp",
+      "director": "Christopher Nolan",
+      "elenco": "Matthew McConaughey, Anne Hathaway",
+      "sinopsis": "Un equipo de exploradores viaja a través de un agujero de gusano."
     },
     {
-      "id": 2,
+      "id": 3,
+      "titulo": "Avatar",
+      "tipo": "pelicula",
+      "anio": 2009,
+      "generos": ["Ciencia ficción", "Acción"],
+      "calificacion": 7.8,
+      "imagen": "assets/img/avatar.jpg",
+      "director": "James Cameron",
+      "elenco": "Sam Worthington, Zoe Saldana",
+      "sinopsis": "Un marine parapléjico es enviado a la luna Pandora en una misión única."
+    },
+    {
+      "id": 4,
       "titulo": "Stranger Things",
       "tipo": "serie",
       "anio": 2016,
       "generos": ["Ciencia ficción", "Drama"],
       "calificacion": 8.6,
-      "imagen": "assets/images/stranger-things.webp"
+      "imagen": "assets/images/stranger-things.webp",
+      "director": "Duffer Brothers",
+      "elenco": "Millie Bobby Brown, Finn Wolfhard",
+      "sinopsis": "Cuando un niño desaparece, un pequeño pueblo descubre un gran misterio."
     }
   ]
 }
-=======
-  "items":[
-    {
-      "titulo":"Interestelar"
-    },
-    {
-      "titulo":"Avatar"
-    },
-    {
-      "titulo":"Stranger Things"
-    }
-  ]
-}
->>>>>>> 1ee9c58162375cedb01f8706587146d168ec8a53
