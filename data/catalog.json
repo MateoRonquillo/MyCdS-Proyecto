@@ -1,3 +1,20 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": 1,
+      "title": "Inception",
+      "image": "assets/img/inception.jpg",
+      "director": "Christopher Nolan",
+      "elenco": "Leonardo DiCaprio, Joseph Gordon-Levitt",
+      "sinopsis": "Un ladrón roba secretos corporativos usando la tecnología de compartir sueños."
+    },
+    {
+      "id": 2,
+      "title": "Interstellar",
+      "image": "assets/img/interstellar.jpg",
+      "director": "Christopher Nolan",
+      "elenco": "Matthew McConaughey, Anne Hathaway",
+      "sinopsis": "Un equipo de exploradores viaja a través de un agujero de gusano en el espacio en un intento por garantizar la supervivencia de la humanidad."
+    }
+  ]
 }
