@@ -39,7 +39,59 @@
       </button>
     </nav>
   </header>
-  <main><h1>Catalogo</h1></main>
+  <main>
+    <h1>Catálogo</h1>
+    <section class="search-section">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Buscar películas o series..."
+      >
+
+      <div id="filters-container" class="filters">
+        <select id="filter-type">
+          <option value="">Todos los tipos</option>
+          <option value="pelicula">Películas</option>
+          <option value="serie">Series</option>
+        </select>
+
+        <select id="filter-genre">
+          <option value="">Todos los géneros</option>
+          <option value="Acción">Acción</option>
+          <option value="Comedia">Comedia</option>
+          <option value="Drama">Drama</option>
+          <option value="Ciencia ficción">Ciencia ficción</option>
+          <option value="Terror">Terror</option>
+          <option value="Animación">Animación</option>
+        </select>
+
+        <select id="filter-year">
+          <option value="">Todos los años</option>
+          <option value="2016">2016</option>
+          <option value="2014">2014</option>
+        </select>
+
+        <select id="sort-by">
+          <option value="default">Ordenar por...</option>
+          <option value="az">Título (A-Z)</option>
+          <option value="za">Título (Z-A)</option>
+          <option value="rating-desc">Mejor calificación</option>
+          <option value="year-desc">Más recientes</option>
+          <option value="year-asc">Más antiguas</option>
+        </select>
+      </div>
+
+
+      <p id="results-counter">0 resultados</p>
+    </section>
+
+
+    <section id="catalog-container">
+
+    </section>
+
+    <p id="empty-message" hidden>No se encontraron resultados.</p>
+  </main>
   <script type="module" src="assets/js/app.js"></script>
 
 </body>
