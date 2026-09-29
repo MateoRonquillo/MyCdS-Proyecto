@@ -14,8 +14,12 @@ export function renderCatalog(items, favoriteIds = []) {
     const isFavorite = favoriteIds.includes(item.id);
     return `
       <article class="catalog-card">
-        <div class="catalog-card__poster" role="img" aria-label="Portada tipográfica de ${title}"><span>${title}</span></div>
+        <div class="catalog-card__poster">
+          <img src="${item.imagen}" alt="Póster de ${title}" loading="lazy">
+          <span>${title}</span>
+        </div>
         <div class="catalog-card__body">
+          <a class="catalog-card__image-source" href="${item.imagenFuente}" target="_blank" rel="noopener noreferrer">Fuente de la imagen</a>
           <div class="catalog-card__meta">${item.tipo || 'Contenido'} · ${item.anio || 'N/A'}</div>
           <h2>${title}</h2>
           <p>${genres.join(' · ') || 'Género no especificado'} · ⭐ ${item.calificacion || 'N/A'}</p>

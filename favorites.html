@@ -7,37 +7,28 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body data-page="favorites">
-    <header class="site-header">
-    <div class="site-header__bar">
-      <a class="site-header__brand" href="index.html">CineScope</a>
-      <button
-        type="button"
-        class="site-header__nav-toggle"
-        data-nav-toggle
-        aria-expanded="false"
-        aria-controls="main-nav"
-        aria-label="Abrir menu de navegacion"
-      >
+  <header class="dashboard-nav">
+    <div class="dashboard-nav__inner">
+      <a class="brand-mark" href="index.html"><span class="brand-mark__dot"></span>CineScope</a>
+      <button type="button" class="dashboard-nav__toggle" data-nav-toggle aria-expanded="false"
+        aria-controls="main-navigation" aria-label="Abrir navegacion">
         <span aria-hidden="true">&#9776;</span>
       </button>
-    </div>
-    <nav id="main-nav" class="site-header__nav" data-nav-menu>
-      <a href="index.html">Inicio</a>
-      <a href="catalog.html">Catalogo</a>
-      <a href="favorites.html">Favoritos</a>
-      <a href="team.html">Equipo</a>
-      <button
-        type="button"
-        class="theme-toggle"
-        data-theme-toggle
-        aria-pressed="false"
-        aria-label="Cambiar a tema oscuro"
-      >
-        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☀️</span>
-        <span class="theme-toggle__thumb"></span>
-        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">🌙</span>
-      </button>
-    </nav>
+      <nav id="main-navigation" class="dashboard-nav__menu" aria-label="Navegacion principal" data-nav-menu>
+        <ul class="dashboard-nav__links">
+          <li><a class="dashboard-nav__link" href="index.html">Resumen</a></li>
+          <li><a class="dashboard-nav__link" href="catalog.html">Catalogo</a></li>
+          <li><a class="dashboard-nav__link active" href="favorites.html" aria-current="page">Favoritos</a></li>
+          <li><a class="dashboard-nav__link" href="team.html">Equipo</a></li>
+        </ul>
+        <span class="dashboard-nav__status"><span class="dashboard-nav__status-dot" aria-hidden="true"></span>Tu espacio de cine</span>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false"
+          aria-label="Cambiar a tema oscuro">
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☀️</span>
+          <span class="theme-toggle__thumb"></span>
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">🌙</span>
+        </button>
+      </nav>
   </header>
   <main class="library-page">
     <p class="eyebrow">TU SELECCIÓN PERSONAL</p>

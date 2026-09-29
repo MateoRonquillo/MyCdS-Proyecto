@@ -19,7 +19,8 @@
       "temporadas": null,
       "calificacion": 8.7,
       "sinopsis": "Un grupo de exploradores viaja a través de un agujero de gusano.",
-      "imagen": "assets/images/interestelar.webp",
+      "imagen": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
+      "imagenFuente": "https://en.wikipedia.org/wiki/Interstellar_(film)",
       "destacada": true
     },
     {
@@ -41,7 +42,8 @@
       "temporadas": 4,
       "calificacion": 8.6,
       "sinopsis": "Un grupo de jóvenes investiga acontecimientos sobrenaturales.",
-      "imagen": "assets/images/stranger-things.webp",
+      "imagen": "https://upload.wikimedia.org/wikipedia/en/b/b1/Stranger_Things_season_1.jpg",
+      "imagenFuente": "https://en.wikipedia.org/wiki/Stranger_Things_season_1",
       "destacada": true
     },
     {
@@ -63,7 +65,8 @@
       "temporadas": null,
       "calificacion": 8.8,
       "sinopsis": "Un especialista en infiltrarse en los sueños recibe una misión casi imposible.",
-      "imagen": "assets/images/el-origen.webp",
+      "imagen": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
+      "imagenFuente": "https://en.wikipedia.org/wiki/Inception",
       "destacada": true
     },
     {
@@ -85,7 +88,8 @@
       "temporadas": 1,
       "calificacion": 8.7,
       "sinopsis": "Dos supervivientes atraviesan un mundo transformado por una pandemia mientras buscan una nueva esperanza.",
-      "imagen": "assets/images/the-last-of-us.webp",
+      "imagen": "https://upload.wikimedia.org/wikipedia/en/3/3e/The_Last_of_Us_season_1_Blu-ray.png",
+      "imagenFuente": "https://en.wikipedia.org/wiki/The_Last_of_Us_season_1",
       "destacada": true
     },
     {
@@ -107,7 +111,8 @@
       "temporadas": null,
       "calificacion": 8.4,
       "sinopsis": "Miles Morales descubre que no es el único Spider-Man y aprende a asumir su propio destino.",
-      "imagen": "assets/images/spider-man-un-nuevo-universo.webp",
+      "imagen": "https://upload.wikimedia.org/wikipedia/en/f/fa/Spider-Man_Into_the_Spider-Verse_poster.png",
+      "imagenFuente": "https://en.wikipedia.org/wiki/Spider-Man:_Into_the_Spider-Verse",
       "destacada": false
     },
     {
@@ -129,7 +134,8 @@
       "temporadas": null,
       "calificacion": 8.5,
       "sinopsis": "Una familia con dificultades económicas se aproxima poco a poco a un hogar privilegiado.",
-      "imagen": "assets/images/parasitos.webp",
+      "imagen": "https://upload.wikimedia.org/wikipedia/en/5/53/Parasite_%282019_film%29.png",
+      "imagenFuente": "https://en.wikipedia.org/wiki/Parasite_(2019_film)",
       "destacada": false
     }
   ]
